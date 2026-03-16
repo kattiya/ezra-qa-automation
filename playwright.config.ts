@@ -1,11 +1,14 @@
 import { defineConfig, devices } from '@playwright/test';
 import * as dotenv from 'dotenv';
+import * as path from 'path';
 
 dotenv.config();
 
+export const STORAGE_STATE = path.join(__dirname, '.auth/member.json');
+
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: false, // booking flow tests must run sequentially to avoid conflicts
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: 1,
@@ -25,9 +28,20 @@ export default defineConfig({
     headless: true,
   },
   projects: [
+    // Auth setup — runs first, logs in once and saves session
+    {
+      name: 'setup',
+      testMatch: /auth\.setup\.ts/,
+      testDir: './fixtures',
+    },
+    // Main test suite — reuses saved session
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: STORAGE_STATE,
+      },
+      dependencies: ['setup'],
     },
   ],
 });
