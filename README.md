@@ -46,7 +46,7 @@ cd ezra-qa-automation
 npm install
 npx playwright install chromium
 
-cp .env.example .env
+cp env.example .env
 ```
 
 ---
