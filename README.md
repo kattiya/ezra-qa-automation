@@ -17,7 +17,7 @@
 - ✅ Clean scalable architecture (POM)
 - ✅ Stable auth/session handling
 - ✅ Debuggable + stakeholder-friendly reporting
-- ✅ Demo-ready flows for engineers and hiring managers
+
 
 ---
 
