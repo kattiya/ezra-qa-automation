@@ -57,11 +57,8 @@ Uses a **setup project** to log in once and reuse session:
 
 ```bash
 npx playwright test --project=setup
-```
 
-Generates:
-```
-.auth/member.json
+npm install -D allure-playwright allure-commandline
 ```
 
 ### Why this matters
