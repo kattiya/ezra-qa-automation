@@ -85,7 +85,7 @@ cp env.example .env
 
 ```bash
 # Run all tests (headless)
-npm test
+npx playwright test
 
 # Run all tests with browser visible
 npm run test:headed
