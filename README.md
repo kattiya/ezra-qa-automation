@@ -121,7 +121,8 @@ npx allure open ./allure-report
 
 ### 📸 Example Allure Report
 
-![Allure Overview](allure-overview.png)
+<img width="1350" height="736" alt="Screenshot 2026-03-17 at 6 55 34 PM" src="https://github.com/user-attachments/assets/39f4d62d-92ef-4575-a76f-10802d9be827" />
+
 
 ---
 
