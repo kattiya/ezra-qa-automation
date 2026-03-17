@@ -65,7 +65,7 @@ npm install
 npx playwright install chromium
 
 # 4. Set up environment variables
-cp .env.example .env
+cp env.example .env
 # Edit .env if needed — defaults point to staging
 ```
 
