@@ -173,6 +173,4 @@ npx allure open ./allure-report
 **Kate Vnuk**  
 Senior QA / Product Ops / Automation
 
----
 
-⭐ If you like this project, feel free to star it!
